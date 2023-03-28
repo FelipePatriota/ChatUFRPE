@@ -35,6 +35,15 @@ for i in range(0, 3):
         titulos.append(titulo)
     quero['titulo'] += titulos
 
+#For para extrair o texto
+numero = len (quero['link'])
+for i in range(numero):
+    url_p = 'https://www.ufrpe.br/' + quero['link'][i]	
+    site = requests.get(url_p, headers=headers)
+    soup = BeautifulSoup(site.content, 'html.parser')
+    conteudo = soup.find('div', class_=re.compile('field field-name-body field-type-text-with-summary field-label-hidden'))
+    texto = conteudo.find('p').get_text().strip()
+    quero['texto'].append(texto)
 
 df = pd.DataFrame(quero)
 df.to_csv('dados_uf.csv', index=False)
