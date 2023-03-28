@@ -23,6 +23,18 @@ for i in range(0, 3):
     link = soup.find_all('div', class_=re.compile(
         'views-field views-field-title'))
 
+    # for para pegar os links
+    for l in link:
+        links = l.find('a').get('href')
+        quero['link'].append(links)    
+   
+    # for para pegar o título
+    titulos = []
+    for l in link:
+        titulo = l.find('a').get_text().strip()
+        titulos.append(titulo)
+    quero['titulo'] += titulos
+
 
 df = pd.DataFrame(quero)
 df.to_csv('dados_uf.csv', index=False)
