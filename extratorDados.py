@@ -36,7 +36,7 @@ for i in range(0, 3):
     quero['titulo'] += titulos
 
 #For para extrair o texto
-numero = len (quero['link'])
+numero = len(quero['link'])
 for i in range(numero):
     url_p = 'https://www.ufrpe.br/' + quero['link'][i]	
     site = requests.get(url_p, headers=headers)
