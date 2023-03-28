@@ -1,4 +1,5 @@
 # ChatUFRPE
 
-Felipe da Silva Coimbra Patriota
-Valdior Zacarias
+- Felipe da Silva Coimbra Patriota
+- Valdior Zacarias
+
