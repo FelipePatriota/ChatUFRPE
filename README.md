@@ -1,5 +1,5 @@
 # ChatUFRPE
 
 - Felipe da Silva Coimbra Patriota
-- Valdior Zacarias
+- Valdir Zacarias de Oliveira Junior
 - Alysso Costa Pereira
