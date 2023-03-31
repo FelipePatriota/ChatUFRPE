@@ -11,7 +11,6 @@ Principais recursos do chatbot:
 
 - Responder a perguntas com base nos dados contidos no arquivo CSV;
 - Realizar tarefas específicas, como enviar arquivos, agendar reuniões e muito mais;
-- Aprender com interações anteriores e aprimorar suas respostas com base no feedback do usuário;
 - Personalizar de acordo com as necessidades específicas do usuário;
 - Integração com o aplicativo de mensagens Telegram.
 
