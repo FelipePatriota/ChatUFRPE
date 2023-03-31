@@ -9,7 +9,7 @@ model = "text-davinci-003"
 # Leia o arquivo CSV usando o módulo csv do python
 import csv
 data = []
-with open("Data.csv", encoding="utf-8") as csvfile:
+with open("Data/Data.csv", encoding="utf-8") as csvfile:
     reader = csv.reader(csvfile)
 
 
