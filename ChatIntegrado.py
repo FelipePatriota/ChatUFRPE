@@ -12,6 +12,7 @@ data = []
 with open("Data.csv", encoding="utf-8") as csvfile:
     reader = csv.reader(csvfile)
 
+
 # Crie uma função que recebe uma pergunta do usuário e gera um texto usando o modelo da open ai
 def generate_text(question):
     # Construa a entrada para a API da open ai com os dados do CSV e a pergunta do usuário
@@ -34,3 +35,12 @@ def generate_text(question):
 
     # Retorne a resposta gerada pelo modelo
     return response["choices"][0]["text"]
+
+# Teste a função com uma pergunta de exemplo
+while True:
+
+    question = input("Digite uma pergunta: ")
+    if question == "quit":
+        break
+    answer = generate_text(question)
+    print(answer)
