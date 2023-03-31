@@ -3,7 +3,7 @@ Descrição do Projeto
 
 Este projeto é um chatbot que utiliza a biblioteca OpenAI e a biblioteca Telebot para responder a perguntas e realizar ações solicitadas pelo usuário. Ele também é integrado com um arquivo CSV para que as respostas do chatbot sejam baseadas nos dados contidos no CSV.
 
-O chatbot pode ser usado em várias situações, como perguntas de atendimento ao cliente, consultoria de bolsas, matriculas e muito mais relacionado a UFRPE. Ele pode ser personalizado de acordo com as necessidades específicas do usuário, adicionando ou removendo funcionalidades e treinando o modelo com dados específicos.
+O chatbot pode ser usado em várias situações, como perguntas de atendimento ao discente, consultoria de bolsas, matriculas e muito mais relacionado a UFRPE. Ele pode ser personalizado de acordo com as necessidades específicas do usuário, adicionando ou removendo funcionalidades e treinando o modelo com dados específicos.
 
 O chatbot é construído em Python e utiliza a API da OpenAI para processar as solicitações do usuário. A biblioteca Telebot é usada para integrar o chatbot com o aplicativo de mensagens Telegram. O arquivo CSV contém dados que o chatbot utiliza para gerar respostas às perguntas dos usuários. O código é bem documentado e fácil de entender, permitindo que outros desenvolvedores possam contribuir com novas funcionalidades ou correções de bugs.
 
