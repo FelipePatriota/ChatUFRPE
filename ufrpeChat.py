@@ -10,11 +10,13 @@ openai.api_key = "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"
 model = "text-davinci-003"
 
 # Leia o arquivo CSV usando o módulo csv do python
+#mudança para ler mais de um arquivo csv
 data = []
-with open("Data.csv", encoding="utf-8") as csvfile:
-    reader = csv.reader(csvfile)
-    for row in reader:
-        data.append(row[0])
+for filename in ["Data/Data.csv", "Data/Data2.csv", "Data/Data3.csv"]:
+    with open(filename, encoding="utf-8") as csvfile:
+        reader = csv.reader(csvfile)
+        for row in reader:
+            data.append(row[0])
 
 # Crie uma função que recebe uma pergunta do usuário e gera um texto usando o modelo da open ai
 
@@ -30,8 +32,8 @@ def generate_text(question):
     response = openai.Completion.create(
         engine=model,
         prompt=input,
-        temperature=0.5,
-        max_tokens=300,
+        temperature=0.9,
+        max_tokens=100,
         top_p=1.0,
         frequency_penalty=0.0,
         presence_penalty=0.0,
