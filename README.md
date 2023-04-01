@@ -19,3 +19,4 @@ Para começar a usar o chatbot, basta seguir as instruções no arquivo README e
 - Felipe da Silva Coimbra Patriota
 - Valdir Zacarias de Oliveira Junior
 - Alysson Costa Pereira
+- Felipe Bertulino
