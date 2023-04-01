@@ -11,6 +11,8 @@ import csv
 data = []
 with open("Data/Data.csv", encoding="utf-8") as csvfile:
     reader = csv.reader(csvfile)
+    for row in reader:
+        data.append(row[0])
 
 
 # Crie uma função que recebe uma pergunta do usuário e gera um texto usando o modelo da open ai
