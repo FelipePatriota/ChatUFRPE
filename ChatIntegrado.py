@@ -9,10 +9,11 @@ model = "text-davinci-003"
 # Leia o arquivo CSV usando o módulo csv do python
 import csv
 data = []
-with open("Data/Data.csv", encoding="utf-8") as csvfile:
-    reader = csv.reader(csvfile)
-    for row in reader:
-        data.append(row[0])
+for filename in ["Data/Data.csv", "Data/Data2.csv", "Data/Data3.csv"]:
+    with open(filename, encoding="utf-8") as csvfile:
+        reader = csv.reader(csvfile)
+        for row in reader:
+            data.append(row[0])
 
 
 # Crie uma função que recebe uma pergunta do usuário e gera um texto usando o modelo da open ai
