@@ -1,6 +1,6 @@
 import openai
 import telebot
-
+#https://replit.com/join/agnrlfszmg-valdirjunior4 
 # Substitua "sk-..." pela sua chave de API secreta
 openai.api_key = ""
 bot = telebot.TeleBot("chave")
