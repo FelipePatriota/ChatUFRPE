@@ -1,7 +1,9 @@
 import openai
+import telebot
 
 # Substitua "sk-..." pela sua chave de API secreta
 openai.api_key = ""
+bot = telebot.TeleBot("chave")
 
 # Escolha um modelo da open ai (por exemplo, davinci)
 model = "text-davinci-003"
@@ -39,11 +41,10 @@ def generate_text(question):
     # Retorne a resposta gerada pelo modelo
     return response["choices"][0]["text"]
 
-# Teste a função com uma pergunta de exemplo
-while True:
+@bot.message_handler(func=lambda message: True)
+def answer_question(message):
+        question = message.text
+        answer = generate_text(question)
+        bot.send_message(message.chat.id, answer)
 
-    question = input("Digite uma pergunta: ")
-    if question == "quit":
-        break
-    answer = generate_text(question)
-    print(answer)
+bot.polling()
