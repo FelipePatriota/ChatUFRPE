@@ -1,68 +1,49 @@
-import csv
 import openai
 import telebot
+import csv
+
+# Substitua "YOUR_API_KEY" pela sua chave de API secreta
 openai.api_key = ""
+
+# Escolha um modelo da OpenAI (por exemplo, "davinci")
 model = "text-davinci-003"
-data1 = []
-data2 = []
-data3 = []
-data4 = []
+
+# Leia os arquivos CSV usando o módulo csv do python e armazene os dados em uma lista
+data = []
 for filename in ["data1.csv", "data2.csv", "data3.csv", "data4.csv"]:
-    with open(filename, "r", encoding="utf-8") as f:
-        reader = csv.reader(f)
-        for row in reader:
-            if filename == "data1.csv":
-                data1.append(row)
-            elif filename == "data2.csv":
-                data2.append(row)
-            elif filename == "data3.csv":
-                data3.append(row)
-            elif filename == "data4.csv":
-                data4.append(row)
+  with open(filename, encoding="utf-8") as csvfile:
+    reader = csv.reader(csvfile)
+    for row in reader:
+      data.append(row[0])
+
+# Crie uma função que recebe uma pergunta do usuário e gera um texto usando o modelo da OpenAI
 def generate_text(question):
-    questions = []
-    answers = []
-    print(f"Received question: {question}")
-    for row in data1:
-        if len(row) > 1:
-            questions.append(row[0])
-            answers.append(row[1])
-    for row in data2:
-        if len(row) > 1:
-            questions.append(row[0])
-            answers.append(row[1])
-    for row in data3:
-        if len(row) > 1:
-            questions.append(row[0])
-            answers.append(row[1])
-    for row in data4:
-        if len(row) > 1:
-            questions.append(row[0])
-            answers.append(row[1])
-    qa_pairs = []
-    for i in range(len(questions)):
-        qa_pairs.append(questions[i] + " " + answers[i])
-    qa_string = ""
-    for i in range(len(qa_pairs)):
-        qa_string += qa_pairs[i] + "\n"
-    prompt = question + "\n" + qa_string
-    response = openai.Completion.create(
-        engine=model,
-        prompt=prompt,
-        temperature=0.9,
-        max_tokens=100,
-        top_p=1,
-        frequency_penalty=0,
-        presence_penalty=0.6,
-        stop=["\n"])
-    print(response)
-    answer = response["choices"][0]["text"]
-    print(f"Generated answer: {answer}")
-    return answer
-bot = telebot.TeleBot("")
+  # Construa a entrada para a API da OpenAI com os dados do CSV e a pergunta do usuário
+  prompt = "Dados:\n"
+  for row in data:
+    prompt += row + "\n"
+  prompt += "\nPergunta: " + question + "\n\nResposta:"
+
+  # Envie uma requisição para a API da OpenAI com os parâmetros desejados
+  response = openai.Completion.create(
+    engine=model,
+    prompt=prompt,
+    max_tokens=1024,
+    n=1,
+    stop=None,
+    temperature=0.7,
+  )
+
+  # Retorne a resposta gerada pelo modelo
+  return response.choices[0].text.strip()
+
+# Teste a função com uma pergunta de exemplo
+bot = telebot.TeleBot()
+
 @bot.message_handler(func=lambda message: True)
-def on_message(message):
-    question = message.text.lower()
-    answer = generate_text(question)
-    bot.send_message(message.chat.id, answer)
+def answer_question(message):
+  question = message.text
+  answer = generate_text(question)
+  bot.send_message(message.chat.id, answer)
+
 bot.polling()
