@@ -27,14 +27,15 @@ def generate_text(question):
   input += "\nPergunta: " + question + "\n\nResposta:"
 
   # Envie uma requisição para a API da open ai com os parâmetros desejados
-  response = openai.Completion.create(engine=model,
-                                      prompt=input,
-                                      temperature=0.9,
-                                      max_tokens=300,
-                                      top_p=1.0,
-                                      frequency_penalty=0.0,
-                                      presence_penalty=0.0,
-                                      stop=["\n"])
+  response = openai.Completion.create(
+    engine=model,
+    prompt=input,
+    temperature=0.9,
+    max_tokens=300,
+    top_p=1.0,
+    frequency_penalty=0.0,
+    presence_penalty=0.0,
+    stop=["\n"])
 
   # Retorne a resposta gerada pelo modelo
   return response["choices"][0]["text"]
