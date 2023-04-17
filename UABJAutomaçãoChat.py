@@ -3,7 +3,7 @@ import openai
 import telebot
 #Chave telegram: 6227139496:AAF4GJm87Sxep8-DO85OTOp7pwEgg9XinNU
 # Substitua "sk-..." pela sua chave de API secreta
-openai.api_key = ""
+openai.api_key = "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"
 
 # Escolha um modelo da open ai (por exemplo, davinci)
 model = "text-davinci-003"
