@@ -1,7 +1,8 @@
 import csv
 import openai
 import telebot
-#Chave telegram: 6227139496:AAF4GJm87Sxep8-DO85OTOp7pwEgg9XinNU
+#http://t.me/Ufrpehidrica_bot
+#Chave telegram: 5981375027:AAEZgFjHxeb46mmTL3Nv099IBO00PffLzEY
 # Substitua "sk-..." pela sua chave de API secreta
 openai.api_key = "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"
 
