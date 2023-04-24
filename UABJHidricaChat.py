@@ -11,7 +11,7 @@ model = "text-davinci-003"
 
 # Leia os arquivos CSV usando o módulo csv do python e armazene os dados em uma lista
 data = []
-for filename in ["Data/Bolsas.csv", "Data/Grades/Grade - Hidrica.csv", "Data3/Matriculas.csv"]:
+for filename in ["Data/Bolsas/Bolsas.csv", "Data/Grades/Grade - Hidrica/Grade - Hidrica.csv", "Data/Matriculas/Matriculas.csv"]:
   with open(filename, encoding="utf-8") as csvfile:
     reader = csv.reader(csvfile)
     for row in reader:
