@@ -4,14 +4,14 @@ import telebot
 #http://t.me/Ufrpeautomacao_bot
 #Chave telegram: 5751725223:AAGxsSLu1sUyL3BUYD20avlhWSDmRJpgaAo
 # Substitua "sk-..." pela sua chave de API secreta
-openai.api_key = "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"
+openai.api_key = ""
 
 # Escolha um modelo da open ai (por exemplo, davinci)
 model = "text-davinci-003"
 
 # Leia os arquivos CSV usando o módulo csv do python e armazene os dados em uma lista
 data = []
-for filename in ["Data/Data.csv", "Data2/Data2.csv", "Data3/Data3.csv"]:
+for filename in ["Data/Bolsas/Bolsas.csv", "Data/Grades/Grade - Controle e Automação/Grade - Controle e Automação.csv", "Data/Matriculas/Matriculas.csv"]:
   with open(filename, encoding="utf-8") as csvfile:
     reader = csv.reader(csvfile)
     for row in reader:
