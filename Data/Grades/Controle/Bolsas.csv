@@ -1,0 +1,27 @@
+Texto
+"Para o 1º(Primeiro) periodo de Controle e Automação as materias das Segundas-Feiras são: Fisíca 1, Cálculo 1, Inglês 1."
+"Para o 1º(Primeiro) periodo de Controle e Automação as materias das Terças-Feiras são: Int. Eng. De Controle e Automação, Programação 1, Geometria Analítica e Desenho Tecnico."
+"Para o 1º(Primeiro) periodo de Controle e Automação as materias das Quartas-Feiras são: Cálculo 1, Física 1."
+Para o 1º(Primeiro) periodo de Controle e Automação as materias das Quintas-Feiras são: Programação 1 e Desenho Tecnico.
+"Para o 1º(Primeiro) periodo de Controle e Automação as materias das Sextas-Feiras são: Metodologia Científica, Inglês 1 e Gestão Ambiental."
+"Para o 2º(Segundo) periodo de Controle e Automação as materias das Segundas-Feiras são: Álgebra Linear , Física 2, Cálculo 2, Inglês 2."
+"Para o 2º(Segundo) periodo de Controle e Automação as materias das Terças-Feiras são: Met. Do Trabalho Cientifico, Quimica Geral, Sistemas Digitais e Fisica 2."
+"Para o 2º(Segundo) periodo de Controle e Automação, as materias das Quartas-Feiras são: Álgebra Linear, Cálculo 2, Sistemas Digitais e Inglês 2."
+Para o 2º(Segundo) periodo de Controle e Automação as materias das Quintas-Feiras são: Quimica Geral.
+Para o 2º(Segundo) periodo de Controle e Automação as materias das Sextas-Feiras são: Met. Do Trabalho Científico e Gestão da Produção.
+"Para o 3º(Terceiro) periodo de Controle e Automação as materias das Segundas-Feiras são: Estatística e Probalidade, Cálculo Numérico e Mecânica Geral."
+"Para o 3º(Terceiro) periodo de Controle e Automação as materias das Terças-Feiras são: Cálculo 3, Física 3, Microcontroladores e Circuitos Eletricos 1."
+"Para o 3º(Terceiro) periodo de Controle e Automação as materias das Quartas-Feiras são: Estatística e Probabilidade, Circuitos Eletricos 1, Cálculo Numerico e Mecanica Geral."
+"Para o 3º(Terceiro) periodo de Controle e Automação as materias das Quintas-Feiras são: Cálculo 3, Fisica 3, Circuitos Eletricos 1 e Microcontroladores."
+Para o 3º(Terceiro) periodo de Controle e Automação as materias das Sextas-Feiras são: Não há disciplinas.
+"Para o 4º(Quarto) periodo de Controle e Automação as materias das Segundas-Feiras são: Inglês 3, Sinais e Sistemas e Calculo 4"
+"Para o 4º(Quarto) periodo de Controle e Automação as materias das Terças-Feiras são: Circuitos Eletricos 2, Fisica 4, Eletronica 1."
+"Para o 4º(Quarto) periodo de Controle e Automação as materias das Quartas-Feiras são: Arquitetura de Computadores, Circuitos Eletricos 2, Inglês 3, Eletronica 1, Sinais e Sistemas."
+"Para o 4º(Quarto) periodo de Controle e Automação as materias das Quintas-Feiras são: Calculo 4, Circuitos Eletricos 2, Fisica 4 e Eletronica 1."
+Para o 4º(Quarto) periodo de Controle e Automação as materias das Sextas-Feiras são: Segurança e Saude no Trabalho.
+"Para o 5º(Quinto) periodo de Controle e Automação as materias das Segundas-Feiras são: Legislaçao para Eng., Eletronica de Potencia, Eletronica 2, Controladores Logicos Programaveis."
+"Para o 5º(Quinto) periodo de Controle e Automação as materias das Terças-Feiras são: Servomecanismos, Proj. Inter. De Eletronica Industrial, Conv. Eletromecanica de Energia., Redes Industrais."
+"Para o 5º(Quinto) periodo de Controle e Automação as materias das Quartas-Feiras são: Eletronica 2, Eletronica de Potencia."
+"Para o 5º(Quinto) periodo de Controle e Automação as materias das Quintas-Feiras são: Servomecanismos, Controladores Logicos Programaveis, Conv. Eletromecanica de Energia., Redes Industrais."
+Para o 5º(Quinto) periodo de Controle e Automação as materias das Sextas-Feiras são: Não há materias.
+materias = cadeiras = disciplinas
