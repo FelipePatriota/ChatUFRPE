@@ -4,14 +4,14 @@ import telebot
 #http://t.me/Ufrpehidrica_bot
 #Chave telegram: 5981375027:AAEZgFjHxeb46mmTL3Nv099IBO00PffLzEY
 # Substitua "sk-..." pela sua chave de API secreta
-openai.api_key = "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"
+openai.api_key = ""
 
 # Escolha um modelo da open ai (por exemplo, davinci)
 model = "text-davinci-003"
 
 # Leia os arquivos CSV usando o módulo csv do python e armazene os dados em uma lista
 data = []
-for filename in ["Data/Data.csv", "Data2/Data2.csv", "Data3/Data3.csv"]:
+for filename in ["Data/Bolsas.csv", "Data/Grades/Grade - Hidrica.csv", "Data3/Matriculas.csv"]:
   with open(filename, encoding="utf-8") as csvfile:
     reader = csv.reader(csvfile)
     for row in reader:
@@ -54,4 +54,3 @@ def answer_question(message):
 
 
 bot.polling()
-
