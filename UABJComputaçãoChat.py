@@ -4,15 +4,15 @@ import telebot
 #http://t.me/Ufrpecomputacao_bot
 #Chave telegram: 6037198912:AAHuImbjPYTPfmVnn9cnSWlGwzyTF4FEn4k
 
-# Substitua "sk-..." pela sua chave de API secreta
-openai.api_key = "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"
+# Substitua "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
+openai.api_key = ""
 
 # Escolha um modelo da open ai (por exemplo, davinci)
 model = "text-davinci-003"
 
 # Leia os arquivos CSV usando o módulo csv do python e armazene os dados em uma lista
 data = []
-for filename in ["Data/Bolsas/Bolsas.csv", "Data/Grades/Computação/Grade.csv", "Data/Matriculas/Matriculas.csv", "Data/Geral.csv"]:
+for filename in ["Data/Grades/Computação/Grade.csv", "Data/Matriculas/Matriculas.csv", "Data/Geral.csv"]:
   with open(filename, encoding="utf-8") as csvfile:
     reader = csv.reader(csvfile)
     for row in reader:
@@ -44,7 +44,7 @@ def generate_text(question):
 
 
 # Teste a função com uma pergunta de exemplo
-bot = telebot.TeleBot("6227139496:AAF4GJm87Sxep8-DO85OTOp7pwEgg9XinNU")
+bot = telebot.TeleBot("6037198912:AAHuImbjPYTPfmVnn9cnSWlGwzyTF4FEn4k")
 
 
 @bot.message_handler(func=lambda message: True)
